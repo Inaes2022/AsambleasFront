@@ -1,0 +1,126 @@
+<div class="treeview-colorful w-20 border border-secondary mx-4 my-4 menu" id = "view_RegistrodeNuevoIntegrante">
+    <section
+class="gradient-form login"
+style="height: auto; "
+id = "view_login"
+>
+<div class="container py-5 h-100" >
+  <div class="row d-flex justify-content-center align-items-center h-100">
+    <div class="col-xl-10">
+      <div class="card rounded-5 text-black " style = "border-width: 0px;">
+        <div class="row g-0">
+          <div class="col-lg-12">
+            
+            <h3 style = "text-align: left;">Registro de nuevo integrante</h3>
+
+<form id = "registrodeDatosdeUsuario">
+        <div class="form-group">
+          <label for="registro_Email">Correo Electrónico*</label>
+          <input type="email" class="form-control" id="registro_email" aria-describedby="registro_emailHelp" placeholder="Correo Electrónico.">
+        </div>
+        <div class="form-group">
+            <label for="registro_idUsuario11">Id usuario*</label>
+            <input type="text" class="form-control" id="registro_idUsuario11" aria-describedby="registro_idUsuarioHelp" placeholder="Identificador de usuario.">
+        </div>
+        <div class="form-group">
+          <label for="registro_password11">Contraseña*</label>
+          <input type="text" class="form-control" id="registro_password11"  aria-describedby="registro_password11Help" placeholder="Contraseña.">
+        </div>
+        <div class="form-group">
+          <button type="button" class="btn btn-secondary" onclick = "generarContrasenia()">Generar contraseña.</button>
+        </div>
+        <div class="form-group">
+          <label for="registro_curp1">CURP*</label>
+          <input type="text" class="form-control" id="registro_curp1" placeholder="CURP" onchange = "obtenerDatosdeUsuario()">
+        </div>
+        <div class="form-group">
+            <label for="registro_nombre">Nombre</label>
+            <input type="text" class="form-control" id="registro_nombre" aria-describedby="registro_nombreHelp" placeholder="Nombre." disabled>
+        </div>
+        <div class="form-group">
+            <label for="registro_apellidoPaterno">Apellido Paterno</label>
+            <input type="text" class="form-control" id="registro_apellidoPaterno" aria-describedby="registro_apellidoPaternoHelp" placeholder="Apellido paterno." disabled>
+        </div>
+        <div class="form-group">
+            <label for="registro_apellidoMaterno">Apellido Materno</label>
+            <input type="text" class="form-control" id="registro_apellidoMaterno" aria-describedby="registro_apellidoMaternoHelp" placeholder="Apellido materno." disabled>
+        </div>
+        <div class="form-group">
+          <label for="registro_nacionalidad">Nacionalidad</label>
+          <input type="text" class="form-control" id="registro_nacionalidad" aria-describedby="registro_nacinalidadHelp" placeholder="Apellido materno." disabled>
+      </div>
+      <div class="form-group">
+          <label for="registro_sexo">Sexo</label>
+          <select class="form-select" aria-label="Default select example" id = "registro_sexo" disabled> 
+            <option value="H" selected>H</option>
+            <option value="M">M</option>
+          </select>
+        </div>
+      
+        <div class="form-group">
+          <label for="registro_fechaNacimiento">Fecha de nacimiento</label>
+          <input type="text" class="form-control" id="registro_fechaNacimiento"  placeholder="Fecha de nacimiento." disabled>
+        </div>
+      
+        <div class="form-group">
+            <label for="registro_telefono1">Teléfono</label>
+            <input type="text" class="form-control" id="registro_telefono1"  placeholder="Teléfono.">
+        </div>
+        <div class="form-group">
+          <label for="registro_whatsapp">Whatsapp</label>
+          <input type="text" class="form-control" id="registro_whatsapp"  placeholder="Whatsapp.">
+        </div>
+        <div class="form-group">
+          <label for="registro_tipo">Tipo de integrante</label>
+          <select class="form-select" aria-label="Default select example" id = "registro_tipo"> 
+            <option value="INTERNO" selected>INTERNO</option>
+            <option value="EXTERNO">EXTERNO</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="registro_status">Estado</label>
+          <select class="form-select" aria-label="Default select example" id = "registro_status"> 
+            <option value="PREAPROBADO" selected>PREAPROBADO</option>
+            <option value="APROBADO" >APROBADO</option>
+            <option value="CANCELADO">CANCELADO</option>
+          </select>
+        </div>
+        
+        <div class="form-check" style = "visibility: hidden;">
+          <input class="form-check-input" type="checkbox" value="" id="registro_voz" checked>
+          <label class="form-check-label" for="registro_voz">
+            Tiene posibilidad de voz.
+          </label>
+        </div>
+        <div class="form-check" style = "visibility: hidden;">
+          <input class="form-check-input" type="checkbox" value="" id="registro_voto" checked>
+          <label class="form-check-label" for="registro_voto">
+            Tiene posibilidad de voto.
+          </label>
+        </div>
+        <div class="form-check">
+          <input class="form-check-input" type="checkbox" value="" id="registro_mesaDirectiva" checked>
+          <label class="form-check-label" for="registro_mesaDirectiva">
+            Forma parte de la mesa directiva.
+          </label>
+        </div>
+        <div class="form-check" style = "visibility: hidden;">
+          <input class="form-check-input" type="checkbox" value="" id="registro_bloqueado">
+          <label class="form-check-label" for="registro_bloqueado">
+            El integrante esta bloqueado.
+          </label>
+        </div>
+       
+     
+        <button type="button" class="btn btn-primary" onclick = "registrarNuevoIntegrante()">Registrar nuevo integrante.</button>
+        <button type="button" class="btn btn-secondary" onclick = "despliegaSeleccionSecretario()">Regresar.</button>
+      </form>
+      
+    </div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+</div>

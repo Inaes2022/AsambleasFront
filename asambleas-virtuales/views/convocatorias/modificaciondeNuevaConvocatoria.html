@@ -1,0 +1,58 @@
+<div class="treeview-colorful w-20 border border-secondary mx-4 my-4 menu" id = "view_modificaciondeNuevaConvocatoria">
+    <section
+class="gradient-form login"
+style="height: auto; "
+id = "view_login"
+>
+<div class="container py-5 h-100" >
+  <div class="row d-flex justify-content-center align-items-center h-100">
+    <div class="col-xl-10">
+      <div class="card rounded-5 text-black " style = "border-width: 0px;">
+        <div class="row g-0">
+          <div class="col-lg-12">
+            
+            <h3 style = "text-align: left;">Modificación de nueva convocatoria</h3>
+
+<form id = "modificaciondeNuevaConvocatoria">
+        <div class="form-group">
+          <label for="modificacion_convocatoria_nombre">Nombre de Asamblea*</label>
+          <input type="text" class="form-control" id="modificacion_convocatoria_nombre" aria-describedby="modificacion_convocatoria_nombreHelp" placeholder="Nombre de la asamblea.">
+        </div>
+        <div class="form-group">
+          <label for="modificacion_convocatoria_numero">Número</label>
+          <input type="text" class="form-control" id="modificacion_convocatoria_numero" aria-describedby="modificacion_convocatoria_numeroHelp" placeholder="Número.">
+      </div>
+     <div class="form-group">
+            <label for="modificacion_convocatoria_tipo">Tipo*</label>
+            <select class="form-select" aria-label="" id = "modificacion_convocatoria_tipo"> 
+              <option value="ORDINARIA" selected>ORDINARIA</option>
+              <option value="EXTRAORDINARIA">EXTRAORDINARIA</option>
+            </select>
+        </div>
+        <div class="form-group">
+          <label for="modificacion_convocatoria_anio">Año</label>
+          <input type="text" class="form-control" id="modificacion_convocatoria_anio" aria-describedby="modificacion_convocatoria_anioHelp" placeholder="Año.">
+      </div>
+      <div class="form-group">
+          <label for="modificacion_convocatoria_fecha_inicio">Fecha de inicio*</label>
+          <input type="date" class="form-control" id="modificacion_convocatoria_fecha_inicio"  aria-describedby="modificacion_convocatoria_fecha_inicioHelp" placeholder="Fecha de inicio de la asamblea.">
+        </div>
+        <div class="form-group">
+          <label for="modificacion_convocatoria_hora_inicio">Fecha final*</label>
+          <input type="date" class="form-control" id="modificacion_convocatoria_fecha_final"  aria-describedby="modificacion_convocatoria_fecha_finalHelp" placeholder="Fecha final de la asamblea.">
+        </div>
+        
+     <div>&nbsp;</div>
+        <button type="button" class="btn btn-primary" onclick = "registrarNuevaConvocatoria()">Modificar convocatoria.</button>
+        <!--<button type="button" class="btn btn-primary" onclick = "registrarOrdendelDia()">Registrar Orden del dia.</button>-->
+        <button type="button" class="btn btn-secondary" onclick = "despliegaMenuConvocatoria()">Regresar.</button>
+      </form>
+      
+    </div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+</div>

@@ -1,0 +1,125 @@
+<div class="treeview-colorful w-20 border border-secondary mx-4 my-4 menu" id = "view_ModificaciondeIntegrante">
+    <section
+class="gradient-form login"
+style="height: auto; "
+id = "view_login"
+>
+<div class="container py-5 h-100" >
+  <div class="row d-flex justify-content-center align-items-center h-100">
+    <div class="col-xl-10">
+      <div class="card rounded-5 text-black " style = "border-width: 0px;">
+        <div class="row g-0">
+          <div class="col-lg-12">
+            
+            <h3 style = "text-align: left;">Modificación de integrante</h3>
+
+<form id = "modificaciondeDatosdeIntegrante">
+        <div class="form-group">
+          <label for="modificacion_email">Correo Electrónico*</label>
+          <input type="email" class="form-control" id="modificacion_email" aria-describedby="emailHelp" placeholder="Correo Electrónico.">
+        </div>
+        <div class="form-group">
+            <label for="modificacion_idUsuario11">Id usuario*</label>
+            <input type="text" class="form-control" id="modificacion_idUsuario11" aria-describedby="idUsuarioHelp" placeholder="Identificador de usuario.">
+        </div>
+        <div class="form-group">
+          <label for="modificacion_password11">Contraseña*</label>
+          <input type="text" class="form-control" id="modificacion_password11"  aria-describedby="passwordHelp" placeholder="Contraseña.">
+        </div>
+        <div class="form-group">
+          <button type="button" class="btn btn-secondary" onclick = "generarContrasenia()">Generar contraseña.</button>
+        </div>
+        <div class="form-group">
+          <label for="curp1">CURP</label>
+          <input type="text" class="form-control" id="modificacion_curp1" placeholder="CURP" onchange = "obtenerDatosdeUsuario()">
+        </div>
+        <div class="form-group">
+            <label for="nombre">Nombre</label>
+            <input type="text" class="form-control" id="modificacion_nombre" aria-describedby="nombreHelp" placeholder="Nombre." disabled>
+        </div>
+        <div class="form-group">
+            <label for="modificacion_apellidoPaterno">Apellido Paterno</label>
+            <input type="text" class="form-control" id="modificacion_apellidoPaterno" aria-describedby="apellidoPaternoHelp" placeholder="Apellido paterno." disabled>
+        </div>
+        <div class="form-group">
+            <label for="modificacion_apellidoMaterno">Apellido Materno</label>
+            <input type="text" class="form-control" id="modificacion_apellidoMaterno" aria-describedby="apellidoMaternoHelp" placeholder="Apellido materno." disabled>
+        </div>
+        <div class="form-group">
+          <label for="modificacion_nacionalidad">Nacionalidad</label>
+          <input type="text" class="form-control" id="modificacion_nacionalidad" aria-describedby="modificacion_nacinalidadHelp" placeholder="Apellido materno." disabled>
+      </div>
+      <div class="form-group">
+          <label for="modificacion_sexo">Sexo</label>
+          <select class="form-select" aria-label="Default select example" id = "modificacion_sexo" disabled> 
+            <option value="H" selected>H</option>
+            <option value="M">M</option>
+          </select>
+        </div>
+      
+        <div class="form-group">
+          <label for="modificacion_fechaNacimiento">Fecha de nacimiento</label>
+          <input type="text" class="form-control" id="modificacion_fechaNacimiento"  placeholder="Fecha de nacimiento." disabled>
+        </div>
+        <div class="form-group">
+            <label for="modificacion_telefono1">Teléfono</label>
+            <input type="text" class="form-control" id="modificacion_telefono1"  placeholder="Teléfono." >
+        </div>
+        <div class="form-group">
+          <label for="modificacion_whatsapp">Whatsapp</label>
+          <input type="text" class="form-control" id="modificacion_whatsapp"  placeholder="Whatsapp.">
+        </div>
+        <div class="form-group">
+          <label for="modificacion_tipo">Tipo de integrante</label>
+          <select class="form-select" aria-label="Default select example" id = "modificacion_tipo"> 
+            <option value="INTERNO" selected>INTERNO</option>
+            <option value="EXTERNO">EXTERNO</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="modificacion_status">Estado</label>
+          <select class="form-select" aria-label="Default select example" id = "modificacion_status"> 
+            <option value="PREAPROBADO" selected>PREAPROBADO</option>
+            <option value="APROBADO" >APROBADO</option>
+            <option value="CANCELADO">CANCELADO</option>
+          </select>
+        </div>
+        
+        <div class="form-check" style = "visibility: hidden;">
+          <input class="form-check-input" type="checkbox" value="" id="modificacion_voz" checked>
+          <label class="form-check-label" for="modificacion_voz">
+            Tiene posibilidad de voz.
+          </label>
+        </div>
+        <div class="form-check" style = "visibility: hidden;">
+          <input class="form-check-input" type="checkbox" value="" id="modificacion_voto" checked>
+          <label class="form-check-label" for="modificacion_voto">
+            Tiene posibilidad de voto.
+          </label>
+        </div>
+        <div class="form-check">
+          <input class="form-check-input" type="checkbox" value="" id="modificacion_mesaDirectiva" checked>
+          <label class="form-check-label" for="modificacion_mesaDirectiva">
+            Forma parte de la mesa directiva.
+          </label>
+        </div>
+        <div class="form-check" style = "visibility: hidden;">
+          <input class="form-check-input" type="checkbox" value="" id="modificacion_bloqueado">
+          <label class="form-check-label" for="modificacion_bloqueado">
+            El integrante esta bloqueado.
+          </label>
+        </div>
+       
+     
+        <button type="button" class="btn btn-primary" onclick = "actualizarIntegrante()">Actualizar integrante.</button>
+        <button type="button" class="btn btn-secondary" onclick = "despliegaSeleccionSecretario()">Regresar.</button>
+      </form>
+      
+    </div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+</div>

@@ -1,0 +1,117 @@
+<div class="treeview-colorful w-20 border border-secondary mx-4 my-4 menu" id = "view_RegistrodeAcuerdo">
+    <section
+class="gradient-form login"
+style="height: auto; "
+id = "view_login"
+>
+<div class="container py-5 h-100" >
+  <div class="row d-flex justify-content-center align-items-center h-100">
+    <div class="col-xl-10">
+      <div class="card rounded-5 text-black " style = "border-width: 0px;">
+        <div class="row g-0"> 
+          <div class="col-lg-12">
+            <h3 style = "text-align: left;">Registro de Acuerdo de Asamblea vigente</h3>
+            <form id = "registrodeDatosdeAcuerdo">
+              <div class="form-group">
+                <label for="registro_acuerdoTitulo">Titulo*</label>
+                <input type="text" class="form-control" id="registro_acuerdoTitulo" aria-describedby="registro_acuerdoTituloHelp" placeholder="Titulo del acuerdo.">
+              </div>
+
+              <div class="form-group">
+                <label for="registro_acuerdoTipo">Tipo*</label>
+                <select class="form-select" aria-label="" id = "registro_acuerdoTipo"> 
+                  <option value="CONOCIMIENTO" selected>CONOCIMIENTO</option>
+                  <option value="OPERATIVO_Y_REMOCIONES">OPERATIVO Y REMOCIONES</option>
+                  <option value="REGLAS_DECICIONES_PATRIMONIALES_Y_SOLUCION_DE_CONFLICTOS">REGLAS, DECICIONES PATRIMONIALES Y SOLUCION DE CONFLICTOS</option>
+                  <option value="NOMBRAMIENTOS_NO_SUJETOS_A_VOTACION_SECRETA">NOMBRAMIENTOS NO SUJETOS A VOTACION SECRETA</option>
+                  <option value="ELECCION_DE_INTEGRANTES_DE_CONSEJO_SUJETO_A_VOTACION_SECRETA">ELECCION DE INTEGRANTES DE CONSEJO SUJETO A VOTACION SECRETA</option>
+                  <option value="REELECCION_DEL_PLENO_DE_INTEGRANTES_DE_CONSEJOS_SUJETOS_A_VOTACION_SECRETA">REELECCION DEL PLENO DE INTEGRANTES DE CONSEJOS SUJETOS A VOTACION SECRETA</option>
+                </select>
+            </div>
+            <div class="form-group">
+              <label for="registro_acuerdoPorcentaje">Pocentaje de votación*</label>
+              <input type="number" class="form-control" id="registro_acuerdoPorcentaje" aria-describedby="registro_acuerdoTituloHelp" placeholder="Porcentaje necesario para aprobación.">
+            </div>
+
+            <table class="table table-stripped table-sm  table-hover"  id = "table_acuerdoListadodeIntegrantes">
+              <thead>
+                <tr>
+                  <th>Opciones de votacion:</th>
+                </tr>
+              </thead>
+              <tbody id = "tbody_acuerdoOpcionesdeVotacion">
+                <tr id = "mensajedeNoOpcionesdeVotacion"><td style = "color:#ff0000;" >Agregue cuando menos 2 opciones de votación</td></tr>
+              </tbody>
+            </table>
+            <form id = "formAcuerdoOpcionesdeVotacion">
+              <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal" data-whatever="@getbootstrap">Agregar opción de votación</button>
+            </form>
+              <div class = "form-group">
+                <label for = "registro_acuerdoDescripcionAcuerdo">Descripción del acuerdo*</label>
+                <textarea class = "form-control" rows = "3" id = "registro_acuerdoDescripcionAcuerdo" placeholder = "Descripción del acuerdo" aria-describedby="registro_acuerdoDescripcionHelp"></textarea>
+             </div>
+              <div class="form-group">
+                <label for="registro_acuerdoNumero">Numero de votaciones*</label>
+                <input type="text" class="form-control" id="registro_acuerdoNumero"  aria-describedby="registro_acuerdoNumeroHelp" placeholder="Número de veces maximo a votar.">
+              </div>
+              <div class="form-group">
+                <label for="registro_acuerdoFechaLimite">Fecha de inicio de deliberacion*</label>
+                <input type="datetime-local" class="form-control" id="registro_acuerdoInicioDeliberacion" aria-describedby="registro_acuerdoFechaLimiteHelp" placeholder="Fecha límite de votación.">
+              </div>
+              <div class="form-group">
+                <label for="registro_acuerdoFechaLimite">Fecha de termino de deliveración*</label>
+                <input type="datetime-local" class="form-control" id="registro_acuerdoFinDeliberacion" aria-describedby="registro_acuerdoFechaLimiteHelp" placeholder="Fecha límite de votación.">
+              </div>
+              <div class="form-group">
+                <label for="registro_acuerdoFechaLimite">Fecha limite de ronda número 1 de votación*</label>
+                <input type="datetime-local" class="form-control" id="registro_acuerdoFechaLimite" aria-describedby="registro_acuerdoFechaLimiteHelp" placeholder="Fecha límite de votación.">
+              </div>
+            </form>
+            <table class="table table-stripped table-sm  table-hover"  id = "table_acuerdoListadodeIntegrantes">
+                <thead>
+                  <tr>
+                    <th>Integrantes con derecho a voto:</th>
+                  </tr>
+                </thead>
+                <tbody id = "tbody_acuerdoListadodeIntegrantes">
+               
+                </tbody>
+              </table>
+    <form id = "formAcuerdoListadodeIntegrantes">
+ 
+        <button type="button" class="btn btn-primary" onclick = "registrarNuevoAcuerdo()">Registrar acuerdo.</button>
+        <button type="button" class="btn btn-secondary" onclick = "despliegaMenuConvocatoria()">Regresar.</button>
+      </form>
+      <!-- Modal -->
+      <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">Indique una opción de votación</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <form>
+                <div class="form-group">
+                  <input type="text" class="form-control" id="opciondeVotacion" placeholder="Opción de votación.">
+                </div>
+              </form>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal" id = "cerrarVentanaAgregarOpcion">Cerrar</button>
+              <button type="button" class="btn btn-primary" onclick = "agregarOpciondeVotacion()">Agregar opcion de votación</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+    </div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+</div>
